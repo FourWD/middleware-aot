@@ -15,8 +15,8 @@ type Vehicle struct {
 	VehicleBrandID    string  `db:"vehicle_brand_id" json:"vehicle_brand_id" gorm:"type:varchar(36) "`
 	VehicleModelID    string  `db:"vehicle_model_id" json:"vehicle_model_id" gorm:"type:varchar(36);"`
 	VehicleSubmodelID string  `db:"vehicle_submodel_id" json:"vehicle_submodel_id" gorm:"type:varchar(36); "`
-	Latitude          float64 `db:"lat" json:"lat" gorm:"type:decimal(3,6)"`
-	Longitude         float64 `db:"long" json:"long" gorm:"type:decimal(3,6)"`
+	Latitude          float64 `db:"lat" json:"lat" gorm:"type:decimal(10,6)"`
+	Longitude         float64 `db:"long" json:"long" gorm:"type:decimal(10,6)"`
 	VehicleStatusID   string  `db:"vehicle_status_id" json:"vehicle_status_id" gorm:"type:varchar(2);"`
 	LocationTypeID    string  `db:"location_type_id" json:"location_type_id" gorm:"type:varchar(2);"`
 	CurrentDriverID   string  `db:"current_driver_id" json:"current_driver_id" gorm:"default:null; type:varchar(36); "`
