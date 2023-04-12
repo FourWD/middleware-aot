@@ -16,6 +16,6 @@ type FuelBill struct { //no CRUD
 	GasStationID        string  `db:"gas_station_id" json:"gas_station_id" gorm:"default:null; type:varchar(36); "`
 	ForceGasStationName string  `db:"force_gas_station_name" json:"force_gas_station_name" gorm:"default:null; type:varchar(200); "`
 	FuelID              string  `db:"fuel_id" json:"fuel_id" gorm:"type:varchar(2);"`
-	Litre               float64 `db:"litre" json:"litre" gorm:"default:null; type:decimal; comment:'จำนวนน้ำมันที่เติม' "`
-	Price               float64 `db:"price" json:"price" gorm:"default:null; type:decimal; comment:'ราคาค่าน้ำมัน' "`
+	Litre               float64 `db:"litre" json:"litre" gorm:"default:null; type:decimal(16,4); comment:'จำนวนน้ำมันที่เติม' "`
+	Price               float64 `db:"price" json:"price" gorm:"default:null; type:decimal(16,4); comment:'ราคาค่าน้ำมัน' "`
 }

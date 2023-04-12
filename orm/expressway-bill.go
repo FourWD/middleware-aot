@@ -16,5 +16,5 @@ type ExpresswayBill struct { //no CRUD
 	ExpresswayID string  `db:"expressway_id" json:"expressway_id" gorm:"type:varchar(2);"`
 	IsReturnTrip string  `db:"is_return_trip" json:"is_return_trip" gorm:"type:varchar(2); comment:'0 = ขาไป 1 =ขากลับ'"`
 	SlipID       string  `db:"slip_id" json:"slip_id" gorm:"type:varchar(2);"`
-	Price        float64 `db:"price" json:"price" gorm:"default:null; type:decimal; comment:'ราคาค่าทางด่วน' "`
+	Price        float64 `db:"price" json:"price" gorm:"default:null; type:decimal(16,4); comment:'ราคาค่าทางด่วน' "`
 }
