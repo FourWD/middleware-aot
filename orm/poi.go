@@ -8,8 +8,12 @@ type Poi struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
 	orm.GormModel
 
-	Name       string  `db:"name" json:"name" gorm:"type:varchar(150)"`
-	Distance   float64 `db:"distance" json:"distance" gorm:"type:decimal"`
+	Name       string  `db:"name" json:"name" gorm:"type:varchar(200)"`
+	NameEn     string  `db:"name_en" json:"name_en" gorm:"type:varchar(200)"`
+	Address    string  `db:"address" json:"address" gorm:"type:varchar(200)"`
+	AddressEn  string  `db:"address_en" json:"address_en" gorm:"type:varchar(200)"`
+	PhoneNo    string  `db:"phone_no" json:"position" gorm:"type:varchar(10)"`
+	Distance   float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	Duration   int     `db:"duration" json:"duration" gorm:"type:int"`
 	ProvinceID string  `db:"province_id" json:"province_id" gorm:"type:varchar(32)"`
 	Latitude   float64 `db:"lat" json:"lat" gorm:"type:decimal(10,6)"`

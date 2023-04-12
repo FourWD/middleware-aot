@@ -4,7 +4,7 @@ import (
 	orm "github.com/HinekoTech/middleware/orm"
 )
 
-type ExpressWayType struct { //no CRUD ทางด่วน 2 ประเภท
+type ExpresswayType struct { //no CRUD ทางด่วน 2 ประเภท
 	ID string `db:"id" json:"id" gorm:"type:varchar(2);primary_key;"`
 	orm.GormModel
 

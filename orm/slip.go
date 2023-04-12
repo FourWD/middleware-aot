@@ -18,12 +18,13 @@ type Slip struct {
 	BookingDateTime      string  `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
 	PoiID                string  `db:"poi_id" json:"poi_id" gorm:"type:varchar(36);"`
 	ForceDesinationName  string  `db:"force_desination_name" json:"force_desination_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
-	Distance             float64 `db:"distance" json:"distance" gorm:"type:decimal"`
+	Distance             float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	PriceRateID          string  `db:"price_rate_id" json:"price_rate_id" gorm:"type:varchar(36);"`
-	Price                float64 `db:"price" json:"price" gorm:"default:null; type:decimal; comment:'ราคาค่าบริการ' "`
-	Discount             float64 `db:"discount" json:"discount" gorm:"default:null; type:decimal; comment:'ส่วนลด' "`
-	Vat                  float64 `db:"vat" json:"vat" gorm:"default:null; type:decimal; comment:'ภาษี' "`
-	NetPrice             float64 `db:"netprice" json:"netprice" gorm:"default:null; type:decimal; comment:'รวมราคาค่าบริการทั้งหมด' "`
+	Price                float64 `db:"price" json:"price" gorm:"default:null; type:decimal(16,4); comment:'ราคาค่าบริการ' "`
+	Discount             float64 `db:"discount" json:"discount" gorm:"default:null; type:decimal(16,4); comment:'ส่วนลด' "`
+	Wht                  float64 `db:"wht" json:"wht" gorm:"default:null; type:decimal(16,4); comment:'ภาษีหัก ที่จ่าย' "`
+	Vat                  float64 `db:"vat" json:"vat" gorm:"default:null; type:decimal(16,4); comment:'ภาษี' "`
+	NetPrice             float64 `db:"netprice" json:"netprice" gorm:"default:null; type:decimal(16,4); comment:'รวมราคาค่าบริการทั้งหมด' "`
 	IsPaid               bool    `db:"is_paid" json:"is_paid" gorm:"default:0; type:tinyint(1); comment:'ลูกค้าจ่ายหรือยัง' "`
 	PaymentTypeID        string  `db:"payment_type_id" json:"payment_type_id" gorm:"type:varchar(2);"`
 	PaymentDateTime      string  `db:"payment_datetime" json:"payment_datetime" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่จ่าย' "`
