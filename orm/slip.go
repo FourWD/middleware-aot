@@ -20,6 +20,8 @@ type Slip struct {
 	ForceDesinationName  string  `db:"force_desination_name" json:"force_desination_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
 	Distance             float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	PriceRateID          string  `db:"price_rate_id" json:"price_rate_id" gorm:"type:varchar(36);"`
+	PromotionID          string  `db:"promotion_id" json:"promotion_id" gorm:"type:varchar(36);"`
+	PromotionRef         string  `db:"promotion_ref" json:"promotion_ref" gorm:"type:varchar(36); comment:'กรณี duoslip เก็บเลขที่ slip ถ้าkansaiเก็บ เลขของ kansai' "`
 	Price                float64 `db:"price" json:"price" gorm:"default:null; type:decimal(16,4); comment:'ราคาค่าบริการ' "`
 	Discount             float64 `db:"discount" json:"discount" gorm:"default:null; type:decimal(16,4); comment:'ส่วนลด' "`
 	Wht                  float64 `db:"wht" json:"wht" gorm:"default:null; type:decimal(16,4); comment:'ภาษีหัก ที่จ่าย' "`

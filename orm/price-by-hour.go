@@ -8,6 +8,8 @@ type PriceByHour struct { // poi ของ รถแต่ละประเภ�
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
 	orm.GormModel
 
+	FleetClientID string `db:"fleet_client_id" json:"fleet_client_id" gorm:"type:varchar(4);"`
+
 	Hour                   int     `db:"ihour" json:"ihour" gorm:"type:int"`
 	PriceByVehicleTypeID01 float64 `db:"price_by_vehicle_type_id_01" json:"price_by_vehicle_type_id_01" gorm:"default:null; type:decimal(10,4); comment:'ค่าโดยสารของรถแต่ละประเภท1(บาท)' "`
 	PriceByVehicleTypeID02 float64 `db:"price_by_vehicle_type_id_02" json:"price_by_vehicle_type_id_02" gorm:"default:null; type:decimal(10,4); comment:'ค่าโดยสารของรถแต่ละประเภท2(บาท)' "`
