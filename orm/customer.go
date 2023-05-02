@@ -10,6 +10,7 @@ type Customer struct {
 
 	Code string `db:"code"  json:"code" gorm:"type:varchar(50) ; dafault:null ; index"`
 
+	PrefixID     string `db:"prefix_id" json:"prefix_id" gorm:"type:varchar(36)"`
 	Firstname    string `db:"firstname" json:"firstname" gorm:"type:varchar(50)"`
 	Lastname     string `db:"lastname" json:"lastname" gorm:"type:varchar(50)"`
 	Birthday     string `db:"birthday" json:"birthday" `

@@ -8,6 +8,7 @@ type SlipType struct { // 01 = Normal 02 = Callcenter 03 = Fleet
 	ID string `db:"id" json:"id" gorm:"type:varchar(2);primary_key;"`
 	orm.GormModel
 
-	Name     string `db:"name" json:"name" gorm:"type:varchar(150)"`
-	RowOrder int    `db:"row_order" json:"row_order" gorm:"type:int"`
+	Name          string `db:"name" json:"name" gorm:"type:varchar(150)"`
+	BookingTypeID string `db:"booking_type_id" json:"booking_type_id" gorm:"type:varchar(2);"`
+	RowOrder      int    `db:"row_order" json:"row_order" gorm:"type:int"`
 }
