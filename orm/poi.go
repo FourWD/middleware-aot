@@ -15,7 +15,7 @@ type Poi struct {
 	PhoneNo    string  `db:"phone_no" json:"position" gorm:"type:varchar(10)"`
 	Distance   float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	Duration   int     `db:"duration" json:"duration" gorm:"type:int"`
-	ProvinceID string  `db:"province_id" json:"province_id" gorm:"type:varchar(32)"`
+	ProvinceID string  `db:"province_id" json:"province_id" gorm:"type:varchar(2)"`
 	Latitude   float64 `db:"lat" json:"lat" gorm:"type:decimal(10,6)"`
 	Longitude  float64 `db:"long" json:"long" gorm:"type:decimal(10,6)"`
 	Image1     string  `db:"image1"  json:"image1" gorm:"dafault:null; type:varchar(200)"`
