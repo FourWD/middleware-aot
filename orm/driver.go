@@ -21,7 +21,7 @@ type Driver struct {
 	DriverLiceseExpireDate string `db:"driverlicense_expiredate" json:"driverlicense_expiredate" gorm:"type:varchar(50)"`
 	PhoneNo                string `db:"phone_no" json:"position" gorm:"type:varchar(10)"`
 	Address                string `db:"address" json:"address" gorm:"type:varchar(150)"`
-	Remark                 string `db:"remark" json:"remark" gorm:"type:varchar(100)"`
+	Remark                 string `db:"remark" json:"remark" gorm:"type:varchar(200)"`
 	DefaultVehicleID       string `db:"default_vehicle_id" json:"default_vehicle_id" gorm:"default:null; type:varchar(36); "`
 	CurrentVehicleID       string `db:"current_vehicle_id" json:"current_vehicle_id" gorm:"default:null; type:varchar(36); "`
 }
