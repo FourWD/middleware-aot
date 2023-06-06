@@ -1,8 +1,8 @@
-module github.com/HinekoTech/middleware-aot
+module github.com/FourWD/middleware-aot
 
 go 1.19
 
-require github.com/HinekoTech/middleware v1.0.17
+require github.com/FourWD/middleware v1.0.25
 
 require (
 	github.com/jinzhu/inflection v1.0.0 // indirect

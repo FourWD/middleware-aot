@@ -3,7 +3,7 @@ package orm
 import (
 	"time"
 
-	orm "github.com/HinekoTech/middleware/orm"
+	orm "github.com/FourWD/middleware/orm"
 )
 
 type PDPAConsent struct {

@@ -1,7 +1,7 @@
 package orm
 
 import (
-	orm "github.com/HinekoTech/middleware/orm"
+	orm "github.com/FourWD/middleware/orm"
 )
 
 type User struct {
