@@ -1,7 +1,7 @@
 package orm
 
 import (
-	orm "github.com/FourWD/middleware/orm"
+	orm "github.com/HinekoTech/middleware/orm"
 )
 
 type BookingType struct { //ประเภทของสลิป 01 = oneway 02 = roundtrip 03 = byhours

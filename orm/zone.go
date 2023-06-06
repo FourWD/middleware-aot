@@ -1,7 +1,7 @@
 package orm
 
 import (
-	orm "github.com/FourWD/middleware/orm"
+	orm "github.com/HinekoTech/middleware/orm"
 )
 
 type Zone struct { //no CRUD 01 = parking 02 = ลานด้านบน 03 = ตารางสนามบิน

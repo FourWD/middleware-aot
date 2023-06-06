@@ -1,7 +1,7 @@
 package orm
 
 import (
-	orm "github.com/FourWD/middleware/orm"
+	orm "github.com/HinekoTech/middleware/orm"
 )
 
 type Customer struct {
