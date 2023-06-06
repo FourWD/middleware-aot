@@ -1,7 +1,7 @@
 package orm
 
 import (
-	orm "github.com/HinekoTech/middleware/orm"
+	orm "github.com/FourWD/middleware/orm"
 )
 
 type WorkShift struct { // กะ การเข้างาน
