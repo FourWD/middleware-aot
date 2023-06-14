@@ -9,5 +9,4 @@ type VehicleType struct {
 	Name     string `db:"name" json:"type_name"`
 	NameEn   string `db:"name_en" json:"type_name_en"`
 	RowOrder int    `db:"row_order" json:"row_order" gorm:"type:int"`
-	SourceID string `db:"source_id" json:"source_id" gorm:"type:varchar(2)"`
 }
