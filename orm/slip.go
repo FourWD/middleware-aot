@@ -8,15 +8,19 @@ type Slip struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
 	orm.GormModel
 
-	SlipNo              string  `db:"slip_no"  json:"slip_no" gorm:"type:varchar(50); index"`
-	SlipTypeID          string  `db:"slip_type_id" json:"slip_type_id" gorm:"type:varchar(2); comment:'call center website etc.'"`
-	SlipTypeServiceID   string  `db:"slip_type_service_id" json:"slip_type_service_id" gorm:"type:varchar(2); comment:'oneway pickup etc.'"`
-	SlipVehicleTypeID   string  `db:"slip_veh_type_id" json:"slip_veh_type_id" gorm:"type:varchar(36); comment:'ประเภทรถตามหน้าตั๋วที่ซื้อ'"`
-	IsPickup            bool    `db:"is_pickup" json:"is_pickup" gorm:"default:0; type:tinyint(1); comment:'รับลูกค้าหรือยัง' "`
-	CounterIP           string  `db:"counter_ip" json:"counter_ip" gorm:"type:varchar(20)"`
-	BookingBy           string  `db:"booking_by" json:"booking_by" gorm:"type:varchar(36); comment:'จองโดย'"`
-	BookingDateTime     string  `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
-	PoiID               string  `db:"poi_id" json:"poi_id" gorm:"type:varchar(36);"`
+	SlipNo            string `db:"slip_no"  json:"slip_no" gorm:"type:varchar(50); index"`
+	SlipTypeID        string `db:"slip_type_id" json:"slip_type_id" gorm:"type:varchar(2); comment:'call center website etc.'"`
+	SlipTypeServiceID string `db:"slip_type_service_id" json:"slip_type_service_id" gorm:"type:varchar(2); comment:'oneway pickup etc.'"`
+	SlipVehicleTypeID string `db:"slip_veh_type_id" json:"slip_veh_type_id" gorm:"type:varchar(36); comment:'ประเภทรถตามหน้าตั๋วที่ซื้อ'"`
+	IsPickup          bool   `db:"is_pickup" json:"is_pickup" gorm:"default:0; type:tinyint(1); comment:'รับลูกค้าหรือยัง' "`
+	IsPickupDateTime  string `db:"ispickup_datetime" json:"ispickup_datetime" gorm:"default:null; type:varchar(50); comment:'เวลารับลูกค้า' "`
+
+	CounterIP       string `db:"counter_ip" json:"counter_ip" gorm:"type:varchar(20)"`
+	BookingBy       string `db:"booking_by" json:"booking_by" gorm:"type:varchar(36); comment:'จองโดย'"`
+	BookingDateTime string `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
+
+	OriginPoiID         string  `db:"origin_poi_id" json:"origin_poi_id" gorm:"type:varchar(36);"`
+	DesinationPoiID     string  `db:"desination_poi_id" json:"desination_poi_id" gorm:"type:varchar(36);"`
 	ForceDesinationName string  `db:"force_desination_name" json:"force_desination_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
 	Distance            float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	PriceRateID         string  `db:"price_rate_id" json:"price_rate_id" gorm:"type:varchar(36);"`
