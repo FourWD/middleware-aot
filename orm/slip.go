@@ -17,6 +17,7 @@ type Slip struct {
 
 	CounterIP           string `db:"counter_ip" json:"counter_ip" gorm:"type:varchar(20)"`
 	BookingBy           string `db:"booking_by" json:"booking_by" gorm:"type:varchar(36); comment:'จองโดย'"`
+	BookingTypeID       string `db:"booking_type_id" json:"booking_type_id" gorm:"type:varchar(2);"`
 	BookingDateTime     string `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
 	OriginPoiID         string `db:"origin_poi_id" json:"origin_poi_id" gorm:"type:varchar(36);"`
 	DesinationPoiID     string `db:"desination_poi_id" json:"desination_poi_id" gorm:"type:varchar(36);"`
