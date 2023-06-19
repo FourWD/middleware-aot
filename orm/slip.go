@@ -15,13 +15,14 @@ type Slip struct {
 	IsPickup          bool   `db:"is_pickup" json:"is_pickup" gorm:"default:0; type:tinyint(1); comment:'รับลูกค้าหรือยัง' "`
 	IsPickupDateTime  string `db:"is_pickup_datetime" json:"is_pickup_datetime" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่ไปรับห' "`
 
-	CounterIP           string `db:"counter_ip" json:"counter_ip" gorm:"type:varchar(20)"`
-	BookingBy           string `db:"booking_by" json:"booking_by" gorm:"type:varchar(36); comment:'จองโดย'"`
-	BookingTypeID       string `db:"booking_type_id" json:"booking_type_id" gorm:"type:varchar(2);"`
-	BookingDateTime     string `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
-	OriginPoiID         string `db:"origin_poi_id" json:"origin_poi_id" gorm:"type:varchar(36);"`
-	DesinationPoiID     string `db:"desination_poi_id" json:"desination_poi_id" gorm:"type:varchar(36);"`
-	ForceDesinationName string `db:"force_desination_name" json:"force_desination_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
+	CounterIP            string `db:"counter_ip" json:"counter_ip" gorm:"type:varchar(20)"`
+	BookingBy            string `db:"booking_by" json:"booking_by" gorm:"type:varchar(36); comment:'จองโดย'"`
+	BookingTypeID        string `db:"booking_type_id" json:"booking_type_id" gorm:"type:varchar(2);"`
+	BookingVehicleTypeID string `db:"booking_veh_type_id" json:"booking_veh_type_id" gorm:"type:varchar(36);"`
+	BookingDateTime      string `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
+	OriginPoiID          string `db:"origin_poi_id" json:"origin_poi_id" gorm:"type:varchar(36);"`
+	DesinationPoiID      string `db:"desination_poi_id" json:"desination_poi_id" gorm:"type:varchar(36);"`
+	ForceDesinationName  string `db:"force_desination_name" json:"force_desination_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
 
 	Distance        float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	PriceRateID     string  `db:"price_rate_id" json:"price_rate_id" gorm:"type:varchar(36);"`
