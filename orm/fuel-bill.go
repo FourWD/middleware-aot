@@ -10,7 +10,7 @@ type FuelBill struct { //no CRUD
 
 	SourceID string `db:"source_id" json:"source_id" gorm:"type:varchar(2);"`
 
-	RefuelDatetime      string  `db:"refuel_datetime"  json:"refuel_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่เติมน้ำมัน' "`
+	RefuelAt            string  `db:"refuel_at"  json:"refuel_at" gorm:"default:null; type:varchar(50); comment:'วันที่เติมน้ำมัน' "`
 	VehicleID           string  `db:"vehicle_id" json:"vehicle_id" gorm:"default:null; type:varchar(36); "`
 	DriverID            string  `db:"driver_id" json:"driver_id" gorm:"default:null; type:varchar(36); "`
 	GasStationID        string  `db:"gas_station_id" json:"gas_station_id" gorm:"default:null; type:varchar(36); "`

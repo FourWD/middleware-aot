@@ -10,7 +10,7 @@ type ExpresswayBill struct { //no CRUD
 
 	SourceID string `db:"source_id" json:"source_id" gorm:"type:varchar(2);"`
 
-	UseDatetime  string  `db:"use_datetime" json:"use_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่ขึ้นทางด่วน' "`
+	UseAt        string  `db:"use_at" json:"use_at" gorm:"default:null; type:varchar(50); comment:'วันที่ขึ้นทางด่วน' "`
 	VehicleID    string  `db:"vehicle_id" json:"vehicle_id" gorm:"default:null; type:varchar(36); "`
 	DriverID     string  `db:"driver_id" json:"driver_id" gorm:"default:null; type:varchar(36); "`
 	ExpresswayID string  `db:"expressway_id" json:"expressway_id" gorm:"type:varchar(2);"`

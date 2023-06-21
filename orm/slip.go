@@ -20,7 +20,7 @@ type Slip struct {
 	SlipSubTypeID string `db:"slip_sub_type_id" json:"slip_sub_type_id" gorm:"type:varchar(2);"`
 
 	BookingVehicleTypeID string `db:"booking_veh_type_id" json:"booking_veh_type_id" gorm:"type:varchar(36);"`
-	BookingDatetime      string `db:"booking_datetime" json:"booking_datetime" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
+	BookingAt            string `db:"booking_at" json:"booking_at" gorm:"default:null; type:varchar(50); comment:'วันที่จอง' "`
 
 	OriginPoiID         string  `db:"origin_poi_id" json:"origin_poi_id" gorm:"type:varchar(36);"`
 	DesinationPoiID     string  `db:"desination_poi_id" json:"desination_poi_id" gorm:"type:varchar(36);"`
@@ -36,7 +36,7 @@ type Slip struct {
 	NetPrice            float64 `db:"netprice" json:"netprice" gorm:"default:null; type:decimal(16,4); comment:'รวมราคาค่าบริการทั้งหมด' "`
 	IsPaid              bool    `db:"is_paid" json:"is_paid" gorm:"default:0; type:tinyint(1); comment:'ลูกค้าจ่ายหรือยัง' "`
 	PaymentTypeID       string  `db:"payment_type_id" json:"payment_type_id" gorm:"type:varchar(2);"`
-	PaymentDatetime     string  `db:"payment_datetime" json:"payment_datetime" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่จ่าย' "`
+	PaymentAt           string  `db:"payment_at" json:"payment_at" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่จ่าย' "`
 	CreditCardNo        string  `db:"credit_card_number" json:"credit_card_number" gorm:"default:null; type:varchar(36);"`
 	CreditCardTypeID    string  `db:"credit_card_type_id" json:"credit_card_type_id" gorm:"type:varchar(2);"`
 
@@ -46,13 +46,13 @@ type Slip struct {
 	IsVoidTypeID string `db:"is_void_type_id" json:"is_void_type_id" gorm:"type:varchar(36);"`
 	VoidRemark   string `db:"void_remark" json:"void_remark" gorm:"type:varchar(500);"`
 	VoidBy       string `db:"void_by" json:"void_by" gorm:"type:varchar(36);"`
-	VoidDatetime string `db:"void_datetime" json:"void_datetime" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่ยกเลิก' "`
+	VoidAt       string `db:"void_at" json:"void_at" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่ยกเลิก' "`
 
 	IsCancel       bool   `db:"is_cancel" json:"is_cancel" gorm:"default:0; type:tinyint(1); comment:'ยกเลิก?' "`
 	IsCancelTypeID string `db:"is_cancel_type_id" json:"is_cancel_type_id" gorm:"type:varchar(36);"`
 	CancelRemark   string `db:"cancel_remark" json:"cancel_remark" gorm:"type:varchar(500);"`
 	CancelBy       string `db:"cancel_by" json:"cancel_by" gorm:"type:varchar(36);"`
-	CancelDatetime string `db:"cancel_datetime" json:"cancel_datetime" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่ยกเลิก' "`
+	CancelAt       string `db:"cancel_at" json:"cancel_at" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่ยกเลิก' "`
 
 	IsNewCustomer bool   `db:"is_newcustomer" json:"is_newcustomer" gorm:"type:tinyint(2)"`
 	CustomerID    string `db:"customer_id" json:"customer_id" gorm:"type:varchar(36);"`
@@ -75,7 +75,7 @@ type Slip struct {
 	AssignVehicleID string `db:"assign_vehicle_id" json:"assign_vehicle_id" gorm:"type:varchar(36); comment:'รถที่วิ่งงานจริง'"`
 	AssignVehicleBy string `db:"assign_vehicle_by" json:"assign_vehicle_by" gorm:"type:varchar(36);"`
 	AssignDriverID  string `db:"assign_driver_id" json:"assign_driver_id" gorm:"default:null; type:varchar(36); "`
-	ArrivedDatetime string `db:"arrived_datetime" json:"arrived_datetime" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่มาถึง' "`
+	ArrivedAt       string `db:"arrived_at" json:"arrived_at" gorm:"default:null; type:varchar(50); comment:'วันเวลาที่มาถึง' "`
 
 	IsCompleted bool `db:"is_completed" json:"is_completed" gorm:"default:0; type:tinyint(1); comment:'เสร็จสมบูรณ์' "`
 }
