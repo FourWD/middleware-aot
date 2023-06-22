@@ -8,7 +8,7 @@ type PriceByDistance struct { // poi ของ รถแต่ละประเ
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
 	orm.GormModel
 
-	FleetClientID string `db:"fleet_client_id" json:"fleet_client_id" gorm:"type:varchar(4);"`
+	FleetClientID string `db:"fleet_client_id" json:"fleet_client_id" gorm:"type:varchar(10);"`
 
 	Distance               float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
 	PriceByVehicleTypeID01 float64 `db:"price_by_vehicle_type_id_01" json:"price_by_vehicle_type_id_01" gorm:"default:null; type:decimal(10,4); comment:'BMW' "`
