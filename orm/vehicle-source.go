@@ -4,7 +4,7 @@ import (
 	orm "github.com/FourWD/middleware/orm"
 )
 
-type Source struct { // 01 = VRP 02=BenzThonglor
+type VehicleSource struct { // 01 = VRP 02=BenzThonglor
 	ID string `db:"id" json:"id" gorm:"type:varchar(2);primary_key;"`
 	orm.GormModel
 
