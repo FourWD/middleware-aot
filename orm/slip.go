@@ -12,18 +12,13 @@ type Slip struct {
 	ReceiptNo string `db:"receipt_no"  json:"receipt_no" gorm:"type:varchar(50); index"`
 	RrNo      string `db:"rr_no"  json:"rr_no" gorm:"type:varchar(50); index"`
 
-	SlipSubTypeID         string `db:"slip_sub_type_id" json:"slip_sub_type_id" gorm:"type:varchar(2);"`
-	SlipVehicleSubModelID string `db:"slip_vehicle_model_id" json:"slip_vehicle_model_id" gorm:"type:varchar(36); comment:'ประเภทรถตามหน้าตั๋วที่ซื้อ'"`
-
-	SlipAt      string `db:"slip_at" json:"slip_at" gorm:"default:null; type:varchar(50); comment:'วันที่ลูกค้าจ่ายตัง กรณี retail'"`
-	TravelAt    string `db:"travel_at" json:"travel_at" gorm:"default:null; type:varchar(50); comment:'วันทีวิ่งจริง'"`
-	ReconcileAt string `db:"reconcile_at" json:"reconcile_at" gorm:"default:null; type:varchar(50); comment:'วันที่ตั๋วเทียบ'"`
+	SlipSubTypeID      string `db:"slip_sub_type_id" json:"slip_sub_type_id" gorm:"type:varchar(2);"`
+	SlipVehicleModelID string `db:"slip_vehicle_model_id" json:"slip_vehicle_model_id" gorm:"type:varchar(36); comment:'ประเภทรถตามหน้าตั๋วที่ซื้อ'"`
 
 	IsPickup  bool   `db:"is_pickup" json:"is_pickup" gorm:"default:0; type:tinyint(1); comment:'รับลูกค้าหรือยัง' "`
-	CounterID string `db:"counter_id" json:"counter_id" gorm:"type:varchar(20)"`
+	CounterIP string `db:"counter_ip" json:"counter_ip" gorm:"type:varchar(20)"`
 
 	OriginPoiID         string  `db:"origin_poi_id" json:"origin_poi_id" gorm:"type:varchar(36);"`
-	ForceOriginName     string  `db:"force_origin_name" json:"force_origin_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
 	DesinationPoiID     string  `db:"desination_poi_id" json:"desination_poi_id" gorm:"type:varchar(36);"`
 	ForceDesinationName string  `db:"force_desination_name" json:"force_desination_name" gorm:"type:varchar(150) ; comment:'กรณีที่ไม่มี POI' "`
 	Distance            float64 `db:"distance" json:"distance" gorm:"type:decimal(16,4)"`
