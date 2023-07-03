@@ -13,5 +13,4 @@ type RentalFuelRate struct { // ค่าเช่าค่าน้ำมัน
 
 	VehicleModelID string  `db:"vehicle_model_id" json:"vehicle_model_id" gorm:"type:varchar(36); "`
 	Litre          float64 `db:"litre" json:"litre" gorm:"type:decimal(16,4)"`
-	Price          float64 `db:"price" json:"price" gorm:"type:decimal(16,4)"`
 }
