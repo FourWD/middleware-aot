@@ -58,7 +58,7 @@ type Slip struct {
 
 	IsNewCustomer bool   `db:"is_newcustomer" json:"is_newcustomer" gorm:"type:tinyint(2)"`
 	CustomerID    string `db:"customer_id" json:"customer_id" gorm:"type:varchar(36);"`
-	Code          string `db:"code"  json:"code" gorm:"type:varchar(9) ; dafault:null ; index"`
+	Code          string `db:"code"  json:"code" gorm:"type:varchar(20) ; dafault:null ; index"`
 	CompanyName   string `db:"company_name" json:"company_name" gorm:"type:varchar(150)"`
 	TaxNo         string `db:"tax_no" json:"tax_no" gorm:"type:varchar(20)"`
 	IsHQ          bool   `db:"is_hq" json:"is_hq" gorm:"type:tinyint(2)"`
