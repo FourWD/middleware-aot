@@ -5,7 +5,7 @@ import (
 )
 
 type FleetClient struct {
-	ID string `db:"id" json:"id" gorm:"type:varchar(4);primary_key;"`
+	ID string `db:"id" json:"id" gorm:"type:varchar(10);primary_key;"`
 	orm.GormModel
 
 	FleetID string `db:"fleet_id" json:"fleet_id" gorm:"type:varchar(4)"`
